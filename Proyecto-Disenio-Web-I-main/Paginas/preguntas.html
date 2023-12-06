@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/PFINALMF/Proyecto-Disenio-Web-I-main/Estilos/preguntas.css">
+    <title>Preguntas Frecuentes</title>
+</head>
+
+<body>
+    <header>
+        <!--Navbar-->
+        <a href="" class="logo">CLADIVEN</a>
+        <input type="checkbox" id="menu-bar" />
+        <label for="menu-bar"
+          ><ion-icon name="menu-outline" size="large"></ion-icon
+        ></label>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/index.html">Inicio</a></li>
+            <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/galeria.html">Galeria</a></li>
+            <li>
+              <a href="">Paginas +</a>
+              <ul>
+                <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/Historia.html">Nuestra Historia</a></li>
+                <li><a href="">Pasos para compras</a></li>
+                <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/informaciondcontacto.html">Informacion de contacto</a></li>
+                <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/descuentos.html">Descuentos</a></li>
+                <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/preguntas.html">Preguntas</a></li>
+                <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/acercadenosotros.html">Acerca de Nosotros</a></li>
+              </ul>
+            </li>
+            <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/blog.html">Moda</a></li>
+            <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/accesorios.html">Accesorios</a>
+            </li>
+          </ul>
+        </nav>
+        <!--Fin Navbar-->
+      </header>
+
+    <section class="faq">
+        <h1>Preguntas Frecuentes</h1>
+
+        <div class="question">
+            <h2 class="question-title" onclick="toggleAnswer(this)">¿Cómo realizo una compra?</h2>
+            <p class="answer">Para realizar una compra, sigue estos simples pasos:<br>
+                1. Inicia sesión en tu cuenta o regístrate si eres nuevo.<br>
+                2. Navega por nuestra tienda y añade los productos que deseas al carrito.<br>
+                3. Revisa tu carrito y procede al pago.<br>
+                4. Ingresa la información de envío y elige un método de pago.<br>
+                5. Confirma tu pedido y ¡listo!</p>
+        </div>
+
+        <div class="question">
+            <h2 class="question-title" onclick="toggleAnswer(this)">¿Cuál es la política de devoluciones?</h2>
+            <p class="answer">Nuestra política de devoluciones permite devolver productos dentro de los 30 días
+                posteriores a la compra. Los productos deben estar en su estado original y con el embalaje
+                original. Para iniciar un proceso de devolución, ponte en contacto con nuestro servicio al cliente.
+                Ten en cuenta que algunas restricciones pueden aplicar.</p>
+        </div>
+
+        <div class="question">
+            <h2 class="question-title" onclick="toggleAnswer(this)">¿Cuánto tiempo tarda en llegar mi pedido?</h2>
+            <p class="answer">El tiempo de entrega depende de tu ubicación y del método de envío seleccionado.
+                Generalmente, nuestros pedidos son procesados y enviados dentro de 1-2 días hábiles.
+                Para obtener información más detallada, consulta nuestra página de seguimiento de pedidos.</p>
+        </div>
+
+        <div class="question">
+            <h2 class="question-title" onclick="toggleAnswer(this)">¿Cómo puedo realizar un seguimiento de mi pedido?
+            </h2>
+            <p class="answer">Una vez que tu pedido ha sido enviado, recibirás un correo electrónico con un enlace
+                de seguimiento. Puedes hacer clic en ese enlace para ver el estado actualizado de tu envío.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-contenedor">
+            <div class="iconos">
+                <a href="" class="instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="" class="facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/index.html">Inicio</a></li>
+                    <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/galeria.html">Galeria</a></li>
+                    <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/blog.html">Moda</a></li>
+                    <li><a href="/PFINALMF/Proyecto-Disenio-Web-I-main/Paginas/accesorios.html">Productos</a></li>
+                  </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy;2023;Designed by <span class="designer">Mario, Enzo, Franklin</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            answer.classList.toggle('active');
+        }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

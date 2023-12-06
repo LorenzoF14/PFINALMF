@@ -1,0 +1,308 @@
+:root {
+  --color-fondo: #fff;
+  --color-letra: #623873;
+  --color-detalles: #C6B9E6;
+  --hover-botones: #9052A8;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 51px;
+  background-color: var(--color-fondo); /* Fondo de la página */
+}
+
+
+
+#blog-section {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background-color: var(--color-detalles); /* Fondo de la sección de blog */
+}
+.Opinion{
+  max-width: 800px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  text-align: center;
+}
+.blog-post {
+  border-bottom: 1px solid var(--color-detalles);
+  margin-bottom: 20px;
+  position: relative; /* Necesario para posicionar los botones de editar y eliminar */
+}
+#blog-form {
+  max-width: 600px;
+  margin: 0 auto; /* Centrar el formulario horizontalmente */
+}
+.blog-post h2 {
+  color: var(--color-letra); /* Color del título de la entrada del blog */
+}
+
+.blog-post p {
+  color: #706d63; /* Color del contenido de la entrada del blog */
+}
+
+.blog-post .date {
+  color: #706d63;
+}
+
+/* Estilos para los botones */
+button {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.boton{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 0 170px; /* Añadí un margen superior de 80px (o el valor que prefieras) */
+}
+
+#agregar-entrada-btn {
+  background: #ff66b2; /* Color de fondo para el botón de agregar entrada */
+  color: #fff; /* Color del texto para el botón de agregar entrada */
+  
+  
+}
+
+.eliminar-button {
+  background: #e74c3c; /* Color de fondo para el botón de eliminar */
+  color: #fff; /* Color del texto para el botón de eliminar */
+}
+
+.editar-button {
+  background: #6a5acd; /* Color de fondo para el botón de editar */
+  color: #fff; /* Color del texto para el botón de editar */
+}
+/* Estilos para el footer */
+footer {
+  background-color: #111;
+  margin-top: 50px;
+}
+
+.footer-contenedor {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.iconos {
+  display: flex;
+  justify-content: center;
+}
+
+.iconos a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.iconos a ion-icon {
+  font-size: 2em;
+  opacity: 0.9;
+}
+
+.iconos a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.iconos a:hover ion-icon {
+  color: white;
+  transition: 0.5s;
+}
+
+.footer-nav {
+  margin: 30px 0;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-nav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footer-nav ul li a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  background-color: #131313;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/* Estilos para el header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  padding: 0px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  color: #623873;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: #623873;
+  display: block;
+}
+
+header ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 65%;
+  height: 2px;
+  background: #c686e6;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+
+header ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 150px;
+  background: #fff;
+  padding: 0;
+  display: none;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1.5px solid #c686e6;
+}
+
+header .navbar ul li ul li a {
+  font-size: 0.9em;
+  color: #623873;
+}
+
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  color: #623873;
+  cursor: pointer;
+  display: none;
+}
+
+.iconos a:nth-child(2) ion-icon {
+  color: #1877f2;
+}
+
+@media (max-width: 860px) {
+  header {
+      padding: 20px;
+  }
+
+  header label {
+      display: initial;
+  }
+
+  header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: none;
+  }
+
+  header .navbar ul li {
+      width: 100%;
+  }
+
+  header .navbar ul li ul {
+      position: relative;
+      width: 100%;
+  }
+
+  header .navbar ul li ul li {
+      background: #eee;
+  }
+
+  header .navbar ul li ul li ul {
+      width: 100%;
+      left: 0;
+  }
+
+  #menu-bar:checked ~ .navbar {
+      display: initial;
+  }
+}
+

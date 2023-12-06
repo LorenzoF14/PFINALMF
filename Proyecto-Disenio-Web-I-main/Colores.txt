@@ -1,0 +1,4 @@
+color fondo:##856269
+color letra:#623873
+color detalles:#C6B9E6
+hover botones:#9052A8

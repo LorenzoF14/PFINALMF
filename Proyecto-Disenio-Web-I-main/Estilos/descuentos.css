@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100s&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    height: 60px;
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    color: #623873;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #623873;
+    display: block;
+}
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    width: 65%;
+    height: 2px;
+    background: #C686E6;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+header ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 150px;
+    background: #fff;
+    padding: 0;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1.5px solid #C686E6;
+}
+
+header .navbar ul li ul li a {
+    font-size: 0.9em;
+    color: #623873;
+}
+
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #623873;
+    cursor: pointer;
+    display: none;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2em;
+    color: #623873;
+    text-align: center;
+}
+
+.discounts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 80px 0 170px; /* Añadí un margen superior de 80px (o el valor que prefieras) */
+}
+
+.discount-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.discount-item:hover {
+    transform: scale(1.05);
+}
+
+.discount-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.discount-item h2 {
+    color: #623873;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.discount-item p {
+    color: #666;
+}
+
+
+footer{
+    background-color: #111;
+    margin-top: 50px;
+  }
+  .footer-contenedor{
+    width: 100%;
+    padding: 70px 30px 20px;
+  }
+  .iconos{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .iconos a{
+    text-decoration:none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .iconos a ion-icon{
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+  }
+  .iconos a:hover{
+    background-color: #111;
+    transition: 0.5s;
+  }
+  .iconos a:hover ion-icon{
+    color: white;
+    transition: 0.5s;
+  }
+  .footer-nav{
+    margin:30px 0;
+  }
+  .footer-nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  .footer-nav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity:0.7;
+    transition:0.5s;
+  }
+  
+  .footer-nav ul li a:hover{
+    opacity: 1;
+  }
+  
+  .footer-bottom{
+    background-color: #131313;
+    padding: 20px;
+    text-align: center;
+  }
+  .footer-bottom p{
+    color: white;
+  }
+  .designer{
+    opacity:0.7;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+    font-weight: 400px;
+    margin: 0px 5px;
+  }
+
+  @media (max-width: 860px) {
+    header {
+      padding: 20px;
+    }
+    header label {
+      display: initial;
+    }
+    header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    header .navbar ul li {
+      width: 100%;
+    }
+    header .navbar ul li ul {
+      position: relative;
+      width: 100%;
+    }
+    header .navbar ul li ul li {
+      background: #eee;
+    }
+    header .navbar ul li ul li ul {
+      width: 100%;
+      left: 0;
+    }
+    #menu-bar:checked ~ .navbar {
+      display: initial;
+    }
+  }

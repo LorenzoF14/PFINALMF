@@ -1,0 +1,260 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-method {
+  margin-bottom: 20px;
+}
+
+.contact-method h2 {
+  color: #333;
+}
+
+.contact-method ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-method ul li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #111;
+  margin-top: 50px;
+}
+
+.footer-contenedor {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.iconos {
+  display: flex;
+  justify-content: center;
+}
+
+.iconos a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.iconos a ion-icon {
+  font-size: 2em;
+  opacity: 0.9;
+}
+
+.iconos a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.iconos a:hover ion-icon {
+  color: white;
+  transition: 0.5s;
+}
+
+.footer-nav {
+  margin: 30px 0;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-nav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footer-nav ul li a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  background-color: #131313;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/* Estilos para el header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  padding: 0px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  color: #623873;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: #623873;
+  display: block;
+}
+
+header ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 65%;
+  height: 2px;
+  background: #c686e6;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+
+header ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 150px;
+  background: #fff;
+  padding: 0;
+  display: none;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1.5px solid #c686e6;
+}
+
+header .navbar ul li ul li a {
+  font-size: 0.9em;
+  color: #623873;
+}
+
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  color: #623873;
+  cursor: pointer;
+  display: none;
+}
+
+.iconos a:nth-child(2) ion-icon {
+  color: #1877f2;
+}
+
+@media (max-width: 860px) {
+  header {
+      padding: 20px;
+  }
+
+  header label {
+      display: initial;
+  }
+
+  header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: none;
+  }
+
+  header .navbar ul li {
+      width: 100%;
+  }
+
+  header .navbar ul li ul {
+      position: relative;
+      width: 100%;
+  }
+
+  header .navbar ul li ul li {
+      background: #eee;
+  }
+
+  header .navbar ul li ul li ul {
+      width: 100%;
+      left: 0;
+  }
+
+  #menu-bar:checked ~ .navbar {
+      display: initial;
+  }
+}
